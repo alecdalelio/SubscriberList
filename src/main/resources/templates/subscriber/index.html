@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriber</title>
+</head>
+
+<body>
+    <h1>Welcome to our awesome site!</h1>
+
+    <h3>Subscribe to our list today. Sign up below!</h3>
+    <form action="#" th:action="@{/}" th:object="${subscriber}" method="post">
+        <table>
+            <tr>
+                <td>First name: </td>
+                <td><input type="text" th:field="*{firstName}" /></td>
+            </tr>
+            <tr>
+                <td>Last name: </td>
+                <td><input type="text" th:field="*{lastName}" /></td>
+            </tr>
+            <tr>
+                <td>Username: </td>
+                <td><input type="text" th:field="*{username}" /></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
